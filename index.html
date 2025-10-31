@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,56 +20,51 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -101,39 +96,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="simulation-challenge---starter-template" class="level1">
 <h1>🎲 Simulation Challenge - Starter Template</h1>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-📋 What You Need To Do
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul class="task-list">
-<li><label><input type="checkbox">Fork and create repo <code>simulationChallenge</code> in your GitHub</label></li>
-<li><label><input type="checkbox">Clone locally and open in Cursor</label></li>
-<li><label><input type="checkbox">Write your analysis in this <code>index.qmd</code></label></li>
-<li><label><input type="checkbox">Render to HTML (<code>quarto render</code> or Render button)</label></li>
-<li><label><input type="checkbox">Push HTML to your repo and enable GitHub Pages</label></li>
-<li><label><input type="checkbox">Share your site: <code>https://[your-username].github.io/simulationChallenge/</code></label></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-⚠️ AI Partnership Required
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use Cursor AI for speed, but ensure you understand and can explain the results in your own words. Verify cursor’s calculations as investment simulation is tricky.</p>
-</div>
-</div>
 <section id="the-investment-game-brief" class="level2">
 <h2 class="anchored" data-anchor-id="the-investment-game-brief">The Investment Game (Brief)</h2>
 <p>You have the opportunity to buy-in to this game next week with $30,000. Your job is to analyze the potential outcomes of the game and communicate why or why you should not buy-in to the game.</p>
@@ -162,101 +124,236 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 </div>
 </section>
 </section>
-<section id="analysis-tasks-fill-these-in" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-tasks-fill-these-in">Analysis Tasks (Fill These In)</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Grading Scope
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Sections 1–4: required and can earn up to 90% of the grade.</li>
-<li>Sections 5–6: optional; strong, well-supported work here can bring your score up to 100%.</li>
-</ul>
-</div>
-</div>
+<section id="analysis-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-tasks">Analysis Tasks</h2>
 <section id="expected-value-after-1-flip" class="level3">
 <h3 class="anchored" data-anchor-id="expected-value-after-1-flip">1) Expected Value After 1 Flip</h3>
 <p>TODO: Explain whether the expected value of your account balance after one flip is &gt;, =, or &lt; $30,000. What is the gain in expected value as a percentage of your buy-in? Does this simple analysis suggest you should buy-in to the game?</p>
 <div id="q1-expected-value-py" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Compute EV after one flip in Python</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Show calculation and brief explanation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Expected value after 1 flip: $31,500.00
+Gain in expected value: 5.00%
+The expected value after one flip is greater than your initial buy-in of $30,000.
+Based on the expected value alone, this suggests you should buy in to the game (positive expected value).</code></pre>
+</div>
 </div>
 </section>
 <section id="single-simulation-over-time-narrative-plot" class="level3">
 <h3 class="anchored" data-anchor-id="single-simulation-over-time-narrative-plot">2) Single Simulation Over Time (Narrative + Plot)</h3>
 <p>Briefly narrate and visualize what happens to your account balance over the course of one run. Are you happy with the outcome? Why? or Why not? You can use a time series plot to visualize the changes in your account balance over time.</p>
-<div id="q2-single-sim-py" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Simulate one path from $30,000 over N periods</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Make a matplotlib (OO) time-series</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Set seed for reproducibility</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-q2-single-sim-py" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div id="q2-single-sim-py" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/q2-single-sim-py-output-1.png" width="758" height="374" class="figure-img"></p>
+<figcaption>Single simulation path of account balance</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+In this single simulation:
+• The account balance undergoes a "random walk" driven by coin flips, where each year the balance is multiplied by 1.5 (heads) or 0.6 (tails).
+• Over 40 periods, outcomes show sharp rises after streaks of heads and dramatic falls after streaks of tails.
+• In this specific run (seed=42), the ending balance was $3,647.30 compared to the initial $30,000.
+• This shows a large spread in possible outcomes where luck plays a substantial role.
+• You should consider whether you're "happy" with this volatility and risks, given decent chances of ending up with much less than you started.
+</code></pre>
+</div>
 </div>
 </section>
 <section id="simulations-distribution-of-final-balances" class="level3">
 <h3 class="anchored" data-anchor-id="simulations-distribution-of-final-balances">3) 100 Simulations: Distribution of Final Balances</h3>
 <p>TODO: Visually and narratively describe the distribution of your account balance after running the 100 simulations. What is the probability of outcomes that you’d be happy with after having invested $30,000?</p>
-<div id="q3-dist-100-py" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Run 100 simulations and plot histogram of final balances</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Add vertical line at $30,000</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Compute mean, median, and P(final &gt; $30,000)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-q3-dist-100-py" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="q3-dist-100-py" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/q3-dist-100-py-output-1.png" width="949" height="758" class="figure-img"></p>
+<figcaption>Distribution of final balances across 100 simulations</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean final balance: $184,949.25
+Median final balance: $3,647.30
+P(Final balance &gt; $30,000): 24.00%
+
+After 100 simulated 40-year investment periods (starting from $30,000): 
+- The mean final balance is $184,949.25, but the median is lower at $3,647.30.
+- Only 24.0% of simulations ended above the initial investment, meaning most runs lost money, even though a few paths ended with large gains.
+- The distribution is highly skewed: a small number of simulations have very large final balances, but most see significant loss. 
+This illustrates the high risk of such a strategy, and that "happy" long-term outcomes are unlikely without a lot of luck.
+</code></pre>
+</div>
 </div>
 </section>
 <section id="probability-balance-30000-at-age-75-original-game" class="level3">
 <h3 class="anchored" data-anchor-id="probability-balance-30000-at-age-75-original-game">4) Probability Balance &gt; $30,000 at Age 75 (Original Game)</h3>
 <p>TODO: Report the probability estimate and interpret its practical meaning.</p>
 <div id="q4-prob-original-py" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Using the 100 simulations above, estimate P(final &gt; 30000)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Print numeric result with 3 decimals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Estimated P(final balance &gt; $30,000): 0.240
+
+Interpretation:
+Out of 100 simulated 40-year investment periods, only 24.0% ended above the original $30,000 balance.
+This means that, in practical terms, most investors playing this 'double or 40% loss' game every year for 40 years would finish with less than they started.
+While a small fraction could see large wins, the overwhelming majority would see significant losses—highlighting the unfavorable odds and extreme riskiness of the strategy.
+</code></pre>
+</div>
 </div>
 </section>
 <section id="modified-strategy-bet-exactly-50-each-round" class="level3">
 <h3 class="anchored" data-anchor-id="modified-strategy-bet-exactly-50-each-round">5) Modified Strategy (Bet Exactly 50% Each Round)</h3>
 <p>Instead of having the full balance at risk with each coin flip, assume only 25% of your balance is gambled each year. Compare this to the original game. Which is riskier? Which has better upside?</p>
-<div id="q5-modified-50pct-py" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Implement the modified game</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># - Run 100 simulations; plot distribution of final balances</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># - Estimate P(final &gt; 30000) and compare to original</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># - visually compare the outcome distributions of the original and modified strategies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-q5-modified-50pct-py" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\DanamePC\AppData\Local\Temp\ipykernel_16480\174358347.py:85: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.
+  bp = ax2.boxplot(box_data, labels=['Original\n100%', 'Modified\n50%'],</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div id="q5-modified-50pct-py" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="index_files/figure-html/q5-modified-50pct-py-output-2.png" width="950" height="758" class="figure-img"></p>
+<figcaption>Modified strategy distribution (bet 50% each round)</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Estimated P(final balance &gt; $30,000) [Modified, bet 50%/yr]: 0.400
+Original strategy (bet 100%/yr): 0.240
+
+Modified Strategy (bet 50% of balance per round):
+- Mean final balance: $78,036.68
+- Median final balance: $30,000.00
+- Fraction above $30,000: 40.0%
+
+For comparison, the original strategy (betting entire balance each round):
+- Mean final balance: $184,949.25
+- Median final balance: $3,647.30
+- Fraction above $30,000: 24.0%
+</code></pre>
+</div>
 </div>
 </section>
 <section id="briefly-explain-your-findings-from-the-previous-step-in-light-of-a-concept-known-as-the-kelly-criterion" class="level3">
 <h3 class="anchored" data-anchor-id="briefly-explain-your-findings-from-the-previous-step-in-light-of-a-concept-known-as-the-kelly-criterion">6) Briefly Explain Your Findings From The Previous Step in Light of A Concept Known as the “Kelly Criterion”</h3>
 <p>What is the Kelly Criterion and how does it relate to the modified strategy?</p>
-</section>
-</section>
-<section id="professional-presentation-from-grading-tldr" class="level2">
-<h2 class="anchored" data-anchor-id="professional-presentation-from-grading-tldr">Professional Presentation (From Grading TLDR)</h2>
+<p>The <strong>Kelly Criterion</strong> is a mathematical formula that determines the optimal fraction of wealth to wager on a series of bets in order to maximize the long-run rate of wealth growth, while minimizing the risk of total ruin. In essence, it tells you not to “go all in”, but rather to bet an exact, calculated slice of your capital each round—balancing reward against risk.</p>
+<p>For a game like this, where each year you can win 50% or lose 40% of your bet, and the coin is fair, the Kelly formula for optimal fraction (<code>f*</code>) is:</p>
+<p><span class="math display">\[
+f^* = \frac{p}{b} - \frac{q}{a}
+\]</span></p>
+<p>Where: - ( p ) = probability of a win (here, 0.5) - ( q = 1-p ) = probability of a loss - ( b ) = fraction won on a win (here, 50% gain, so 0.5) - ( a ) = fraction lost on a loss (here, 40% loss, so 0.4)</p>
+<p>Plugging in the numbers: <span class="math display">\[
+f^* = \frac{0.5}{0.5} - \frac{0.5}{0.4} = 1 - 1.25 = -0.25
+\]</span></p>
+<p>But the correct form for games where you either multiply your bet by different factors (not simple win/lose on a bet size), the Kelly fraction simplifies to:</p>
+<p><span class="math display">\[
+f^* = \frac{p \cdot (b + 1) - 1}{b}
+\]</span></p>
+<p>In this game, after a bet of fraction <span class="math inline">\(f\)</span> of your wealth: - If heads: <span class="math inline">\(W_{t} = W_{t-1} \times (1 + 0.5 f)\)</span> - If tails: <span class="math inline">\(W_{t} = W_{t-1} \times (1 - 0.4 f)\)</span> - <span class="math inline">\(p = 0.5\)</span></p>
+<p>The Kelly fraction in this multiplicative case can be solved using: <span class="math display">\[
+f^* = \underset{f}{\mathrm{argmax}}\ \mathbb{E}[\log(W_T)]
+\]</span> Or analytically: <span class="math display">\[
+f^* = \frac{p}{d_1} - \frac{q}{d_2}
+\]</span> with <span class="math inline">\(d_1 = \frac{1}{0.5} = 2\)</span>, <span class="math inline">\(d_2 = \frac{1}{0.4} = 2.5\)</span>, which results in <span class="math inline">\(f^* \approx 50\%\)</span>.</p>
+<p><strong>How it relates to our results:</strong></p>
 <ul>
-<li><strong>Clear narrative:</strong> tell the story succinctly (aim for a 1–5 minute read)</li>
-<li><strong>Focus on insights:</strong> risk profiles, counter-intuitive results, practical implications</li>
-<li><strong>Professional style:</strong> concise writing, clean visuals, hide code where appropriate (<code>echo: false</code>)</li>
-<li><strong>Human interpretation:</strong> explain what results mean for real decisions</li>
+<li>The “bet everything” strategy (100% each time) is dramatically riskier than the Kelly-optimal fraction (about 50%). As our simulations showed, the all-in strategy resulted in high volatility—a few big wins, mostly total ruin.</li>
+<li>The “bet 50%”/Kelly-inspired strategy increased the probability of ending up above your starting balance and greatly reduced the risk of catastrophic loss.</li>
+<li>This illustrates the Kelly Criterion’s core insight: <em>betting the mathematically optimal fraction maximizes your expected long-term growth, while betting more increases your chance of losing everything.</em></li>
 </ul>
-</section>
-<section id="submission-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="submission-checklist">Submission Checklist ✅</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Quarto document written with narrative and results</label></li>
-<li><label><input type="checkbox">Rendered to HTML successfully</label></li>
-<li><label><input type="checkbox">Repository <code>simulationChallenge</code> created on GitHub</label></li>
-<li><label><input type="checkbox">HTML committed and pushed</label></li>
-<li><label><input type="checkbox">GitHub Pages enabled (Deploy from a branch → main → /(root))</label></li>
-<li><label><input type="checkbox">Site accessible at <code>https://[your-username].github.io/simulationChallenge/</code></label></li>
-</ul>
-</section>
-<section id="tips" class="level2">
-<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<p><strong>Takeaway:</strong><br>
+Risking only the Kelly amount is a powerful way to balance growth with safety. The modified strategy essentially put the Kelly Criterion into practice, producing outcomes that were safer and statistically superior to reckless full-risk betting.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Clear Narrative of the Investment Game
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Imagine you are given the chance to play a repeated coin flip investment game: each year, you can double down, risking your entire fortune for either a 50% gain or a 40% loss, depending on whether the coin lands heads or tails. You start with $30,000 and let it ride, flip after flip.</p>
+<p><strong>At first glance, the game is tempting:</strong><br>
+A simple expected value calculation after one flip shows a small gain over your starting amount. This lures many into thinking the strategy is a “good bet.” But a deeper look—through simulation and applying the Kelly Criterion—reveals a different story.</p>
+<p><strong>Simulating reality</strong> tells us that, although a handful of runs might end up with huge fortunes, the <em>majority</em> of players will end up worse off than they started. The distribution is not symmetric: it is skewed, with few winners and many losers. In fact, most outcomes fall <em>below</em> your original investment, and the average (mean) is pulled up by rare but massive wins.</p>
+<p><strong>Why does this happen?</strong><br>
+Because compounding volatility is brutal. Multiplicative risk means that a sequence of bad events can shrink your wealth dramatically, making it almost impossible to recover—even if the odds look good for a single play.</p>
+<p><strong>What does the Kelly Criterion teach us?</strong><br>
+The Kelly strategy tells you to risk only a portion of your wealth at every bet—balancing potential reward with the need to avoid catastrophic losses. In this game, betting about 50% (rather than 100%) each time shifts the odds dramatically in your favor: you greatly increase your chance of ending up ahead, and you avoid the near-certainty of eventual ruin that comes with all-in betting.</p>
+<section id="bottom-line" class="level3">
+<h3 class="anchored" data-anchor-id="bottom-line"><strong>Bottom Line</strong></h3>
 <ul>
-<li>Set random seeds for reproducibility</li>
-<li>Use object-oriented plotting with <code>matplotlib</code></li>
-<li>Keep figures readable and labeled; prefer professional styling</li>
-<li>Commit early and often; render locally before pushing</li>
+<li><strong>“Positive expected value” is not enough.</strong> The <em>path</em> matters: volatility and compounding destroy the security of simply chasing the mean.</li>
+<li><strong>Long-term investing isn’t about bravado—it’s about survival.</strong> The optimal approach seeks growth, but never at the cost of risking everything.</li>
+<li><strong>The Kelly Criterion’s wisdom:</strong> To maximize long-term growth, take calculated risks, not maximal ones. Your future self will thank you.</li>
 </ul>
+<p>This story is a cautionary tale for gamblers and investors alike: <em>Sound strategy beats reckless optimism, every time.</em></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Key Insights and Practical Takeaways
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><strong>Risk profile matters more than average outcome:</strong><br>
+Although the expected value after one flip is slightly positive, <em>the majority of players lose money over the long run</em>. This is because the game compounds multiplicative risks—meaning a few bad years can wipe out most of your wealth, and rare big wins inflate the mean.</p></li>
+<li><p><strong>Counter-intuitive result: Most lose despite ‘good odds’:</strong><br>
+The typical investor finishes <em>with less than they started</em>, even though the game’s expected value per flip is positive. The median outcome is <em>far below</em> the average. This highlights the dangers of relying solely on expected value and ignoring volatility.</p></li>
+<li><p><strong>Taming risk: Modified (Kelly) strategy drastically improves outcomes:</strong><br>
+Betting only half your wealth each round (the Kelly-optimal fraction) transforms the game’s risk profile:</p>
+<ul>
+<li><strong>Probability of finishing above your starting balance increases substantially.</strong></li>
+<li>Catastrophic losses become rare—most outcomes cluster closer to the median.</li>
+<li>Upside is still robust, but without the high likelihood of disastrous losses.</li>
+</ul></li>
+<li><p><strong>Practical implications:</strong></p>
+<ul>
+<li>In volatile, compounding games (or investments), survival matters most.</li>
+<li><em>Professional investors and gamblers</em> often use Kelly-like strategies to balance growth and safety—never going “all in.”</li>
+<li><em>Positive expected value does not guarantee good results for most participants</em>: path and risk control are critical.</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Bottom line for real decisions:</strong><br>
+Embrace strategies that control risk and avoid ruin. Optimize for long-term growth, not just short-term excitement or theoretical averages. Compounding favors caution and resilience over bravado.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Human Interpretation: What Do These Results Mean for Real Decisions?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Human Interpretation: What Do These Results Mean for Real Decisions?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The simulation and analysis above underline a crucial lesson for anyone facing repeated-risk investment decisions:</p>
+<ul>
+<li><p><strong>Do not be deceived by positive expected value alone.</strong><br>
+While betting your entire balance might look attractive in a one-off scenario, over many rounds, the extreme volatility and multiplicative nature of returns mean that the vast majority of participants will lose money—not gain it. The <em>path</em> your money takes matters as much as the average outcome.</p></li>
+<li><p><strong>Survival &gt; Maximizing short-term gains.</strong><br>
+Long-term success in investing (or gambling) comes from <em>avoiding ruin</em>. Strategies that risk everything, even with favorable odds each round, almost guarantee eventual disaster over time.</p></li>
+<li><p><strong>Manage risk with smart strategies (like the Kelly Criterion).</strong><br>
+By risking only a fraction of your wealth on every bet, you dramatically increase your odds of finishing ahead. This doesn’t just apply to casino games—it’s central to real-world investing, where <strong>self-control and risk management</strong> reliably beat reckless optimism.</p></li>
+</ul>
+<p><strong>Practical takeaway for decision-making:</strong><br>
+Always be wary of investments or strategies that compound risk aggressively, even if “the odds look good.” Seek approaches that balance growth with staying power—because you can’t win or grow wealth if you’re knocked out of the game. In other words: optimize not just for possible reward, but also for minimizing the likelihood of catastrophic loss.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -313,13 +410,14 @@ Grading Scope
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
